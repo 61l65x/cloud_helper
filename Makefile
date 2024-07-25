@@ -7,8 +7,9 @@ build:
 	docker-compose -f $(COMPOSE_FILE) build
 
 up:
-	@echo "Starting Docker Compose stack..."
-	docker-compose -f $(COMPOSE_FILE) up -d
+	@export PUBLIC_IP=$$(curl -s ifconfig.me) && \
+	echo "Starting Docker Compose stack with PUBLIC_IP=$$PUBLIC_IP" && \
+	PUBLIC_IP=$$PUBLIC_IP docker-compose -f $(COMPOSE_FILE) up -d
 
 down:
 	@echo "Stopping Docker Compose stack..."
