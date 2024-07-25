@@ -13,7 +13,7 @@ This repository contains various useful software setups that can be easily deplo
 Navigate to the `wireguard` directory and follow the instructions in the `README.md` file to set up the WireGuard VPN using Docker Compose.
 
 ### Cockpit 
-
++ Recomend to just apt install cockpit since the docker images are not always up to date etc..
 + Access the ui on localhost:9090
 Ready to deploy like that.
 
