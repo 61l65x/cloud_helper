@@ -5,17 +5,25 @@ This repository contains various useful software setups that can be easily deplo
 ## Available Services
 
 - **WireGuard VPN**: Secure and fast VPN setup using Docker Compose.
-- (Add other services here as you include them)
+- **Cockpit**: A web-based graphical interface for managing servers.
 
-## How to Use
 
-Each service has its own directory with detailed instructions on how to deploy it. Simply navigate to the service directory and follow the provided guide.
+### WireGuard VPN
++ Remember to forward the port from the vps.
+Navigate to the `wireguard` directory and follow the instructions in the `README.md` file to set up the WireGuard VPN using Docker Compose.
 
-## Contributions
+### Cockpit 
 
-Contributions are welcome! If you have a useful service or tool that can be deployed on cloud instances, feel free to add it to the repository.
++ Access the ui on localhost:9090
+Ready to deploy like that.
 
-## License
 
-This repository is licensed under the MIT License.
+**Ensure Docker and Docker Compose are Installed:**
+```bash
+# Run the script to install docker
+./install_docker.sh
+
+# Deploy the containers
+docker compose up -d
+```
 
